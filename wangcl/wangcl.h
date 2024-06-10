@@ -32,23 +32,23 @@ void end(){
 }
 void java(string v){
 	string command="java -Xmx1024M -Xms1024M -jar minecraft"+v+".jar";
-	system(command);
+	system(command.c_str());
 	return;
 }
-void bedrock(string cd){
-	string command="cd "+cd;
-	system(command);
+void sbedrock(){
+	string command="cd "+bedrock;
+	system(command.c_str());
 	system("start minecraft");
 }
 void website(){
-	cout<<"ÇëÊäÈëÏëÒªÆô¶¯µÄÍøÒ³°æ±¾"<<endl;
+	cout<<"è¯·è¾“å…¥æƒ³è¦å¯åŠ¨çš„ç½‘é¡µç‰ˆæœ¬"<<endl;
 	for(int i=1;i<=ans;i++){
 		cout<<i<<"."<<w[i].name<<endl;
 	}
 	int user;
 	cin>>user;
-	string command="start "+w[i].web;
-	system(command);
+	string command="start "+w[user].web;
+	system(command.c_str());
 	return;
 }
 void add_web(string name,string to){
@@ -58,7 +58,7 @@ void add_web(string name,string to){
 }
 void del_web(string name){
 	int flag;
-	for(int i=1;i<=n;i++){
+	for(int i=1;i<=ans;i++){
 		if(name==w[i].name){
 			flag=i;
 			break;
