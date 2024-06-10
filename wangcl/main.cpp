@@ -3,8 +3,10 @@ using namespace std;
 string str;
 int main(){
 	init();
+	getchar();
 	while(true){
-		cin>>str
+		cin>>str;
+		cin.ignore();
 		if(str=="/end"){
 			end();
 			break;
@@ -14,7 +16,7 @@ int main(){
 			java(str);
 		}
 		else if(str=="/bedrock"){
-			bedrock(str);
+			sbedrock();
 		}
 		else if(str=="/cbedrock"){
 			cin>>bedrock;
@@ -34,10 +36,10 @@ int main(){
 		else if(str=="/color"){
 			cin>>str;
 			string command="color "+str;
-			system(command);
+			system(command.c_str());
 		}
 		else{
-			cout<<"´íÎó"<<endl;
+			cout<<"é”™è¯¯"<<endl;
 		}
 	}
 	return 0;
